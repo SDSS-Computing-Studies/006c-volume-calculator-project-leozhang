@@ -33,6 +33,10 @@ def instructions():
     print("enter yes to redo the program")
     print("enter no to end the program")
     print("\n")
+    print("Shapes available: ")
+    print("\n")
+    print("sphere, cylinder, cone, cube, cuboid, pyramid, triangular prism")
+    print("\n")
     return None
 
 def getShape():
@@ -72,7 +76,7 @@ def getParams(shape):
     elif shape=="cube":
         question=[w]
         return question
-    elif shape=="rectangle":
+    elif shape=="cuboid":
         question=[h,w,l]
         return question
     elif shape=="pyramid":
@@ -121,7 +125,7 @@ def Calculate(measurements,shape):
     elif shape=="cube":
         v=measurements[0]**3
         return v
-    elif shape=="rectangle":
+    elif shape=="cuboid":
         v=measurements[0]*measurements[1]*measurements[2]
         return v
     elif shape=="pyramid":
