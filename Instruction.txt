@@ -3,5 +3,7 @@ Volume Calculator
 
 This program allows users to pick a 3-dimensional shape an calculate the volume for them. 
 Shapes available are sphere, cylinder, cone, cube, cuboid, pyramid, and triangular prism.
-To calculate the volume, youu need to select a shape you want, then the program will require basic measurements that is needed, like length, width or height if you want to calculate the volume of a cuboid. 
+To calculate the volume, you need to select a shape first, then the program will require basic measurements that is needed, like length, width or height if you want to calculate the volume of a cuboid. 
+
+
 
