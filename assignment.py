@@ -58,8 +58,8 @@ def getParams(shape):
     #baseheight=input("Enter the height of a base of a surface of a triangle (calculate the area of the base): ")
     #baselength=input("Enter the length of one side of a surface of a triangle: ")
 
-    prompts=["Enter the radius: ","Enter the height:","Enter the width: ","enter the length: ","Enter the height of a base of a surface of a triangle: ","Enter the length of one side of a surface of a triangle: ","not availble"]
-    r,h,w,l,baseheight,baselength,no=prompts
+    prompts=["Enter the radius: ","Enter the height:","Enter the width: ","enter the length: ","Enter the height of a base of a surface of a triangle: ","Enter the length of one side of a surface of a triangle: "]
+    r,h,w,l,baseheight,baselength,=prompts
     if shape=="sphere":
         question=[r]
         return question
@@ -82,12 +82,12 @@ def getParams(shape):
         question=[baseheight,baselength,h]
         return question
     else:
-        question=[no]
+        question=[0]
         return question
 
         
 
-def getInputs(question,shape):
+def getInputs(question):
     # Will prompt the user for inputs for the shape they.
     # These will be asked so that the user can enter in appropriate values
     # It will turn all the input data into a list
@@ -97,14 +97,13 @@ def getInputs(question,shape):
     a=0
     List=[]
     for i in question:
-        if shape == "sphere" or "cylinder" or "cone" or "cube" or "rectangle" or "pyramid"or "triangular prism":
+        if question[a]==0:
+            break
+        else:
             c=input(question[a])
             c=float(c)
             List.append(c)
             a+=1
-        else:
-            c=0
-            List.append(c)
     return List
     
 
@@ -147,7 +146,7 @@ def main():
      # get list of questions
     questions=getParams(shape)
     # gets list of measurements
-    measurements=getInputs(questions,shape)
+    measurements=getInputs(questions)
     print("volume is "+str(Calculate(measurements,shape))) # calculate the volume
 
 main()
